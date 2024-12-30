@@ -16,14 +16,46 @@
             password:
             <input placeholder="enter your password" type="password" name="password" id="">
         </label>
+        <button type="submit">submit</button>
+        <input type="submit" value="submit">
+        <!-- Both <button type="submit"> and <input type="submit"> are used to create buttons that submit a form, but they have some differences in terms of flexibility and use cases:
+
+1. Syntax and Customization:
+<button type="submit">:
+
+This allows you to include more complex content inside the button, such as text, images, or HTML elements (like icons).
+Example:
+html
+Copy code
+<button type="submit">
+    <img src="icon.png" alt="icon"> Submit
+</button>
+<input type="submit">:
+
+This is a self-closing tag and cannot contain any additional content or HTML elements.
+The button text is set with the value attribute.
+Example:
+html
+Copy code
+<input type="submit" value="Submit"> -->
         <button type="reset">reset</button>
     </form>
 
     <div>
         <h2>Learning form</h2>
         <form >
+            <label for="email">
+                Email:
+                <input type="email" name="email" id="">
+            </label>
+            <button type="submit">submit</button>
+            <!-- when you finally try to submit it will show error if email is not in the correct format like@___.com. that is why we use input type ="email" instead of "text" -->
+            
             <label for="Games">
                 Basketball: <input type="checkbox" name="" id="">
+            </label>
+            <label for="Games">
+                badminton: <input type="checkbox" name="" id="">
             </label>
             <label for="Games">
                 <select name="Games" id="">
@@ -32,9 +64,14 @@
                 </select>
             </label>
             <label for="month">
+                <input type="month" name="" id="">
+                <input type="file" name="" id="">
                 <input type="color" name="" id="">
+                <!-- ctrl+space to get suggestions 
+                 you should see mdn reference for learning input types as u need them not now -->
             </label>
             <button type="submit">submit</button>
+            <textarea rows="10" cols="10"></textarea>
         </form>
     </div>
 </body>
